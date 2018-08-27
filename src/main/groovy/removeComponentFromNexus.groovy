@@ -39,7 +39,7 @@ try {
             componentsSize++
 
             log.info(" component ${t.name()} ${t.version()}")
-            if (t.lastUpdated() > startDate) {
+            if (t.lastUpdated() < startDate) {
                 log.info(" remove component ${t.name()} ${t.version()}")
                 tx.deleteComponent(t)
 
